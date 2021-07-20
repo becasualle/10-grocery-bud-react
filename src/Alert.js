@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 const Alert = ({ msg, type, removeAlert, list }) => {
+  // each time we change list - removeAlert after 3 sec
   useEffect(() => {
     const timeout = setTimeout(() => {
       removeAlert()
@@ -10,6 +11,7 @@ const Alert = ({ msg, type, removeAlert, list }) => {
 
 
   return (
+    // change background color depending on type
     <p className={`alert alert-${type}`}> {msg} </p>
   )
 }
